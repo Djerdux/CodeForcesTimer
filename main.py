@@ -5,7 +5,7 @@ import win10toast
 from os import system
 
 # init varibles
-name, re_time = get_contest
+name, re_time = get_contest()
 nick, rg = get_rank()
 W, H = 400, 100
 times = (3*3600, 3600, 600, 120)
@@ -36,7 +36,7 @@ def update_time():
 
 
 root = tk.Tk()
-
+root.iconbitmap('favicon.ico')
 lable = tk.Label(
     font=("Fixedsys", 16),
     text=f"{nick}:{rg}\n"+f"{name}\n{time.strftime(f'{abs(re_time) // 60 // 60 // 24}'+':%H:%M:%S', time.gmtime(abs(re_time)))}",
